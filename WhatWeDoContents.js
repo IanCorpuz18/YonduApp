@@ -4,7 +4,11 @@ export const WhateWeDoContent =[
     id:0,
     title:"Software Developmeasdasdnt",
     icon:"ios-desktop",
-    
+    subContents:[
+        "ian",
+        "corpuz",
+        "asd"
+]
 },
 {
     id:1,
@@ -29,7 +33,7 @@ export const WhateWeDoContent =[
 {
     id:5,
     title:"Enterprise Solutions",
-    icon:"ios-appbase"
+    icon:"ios-apps"
 }
 
 

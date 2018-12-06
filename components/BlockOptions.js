@@ -25,17 +25,9 @@ import {WhateWeDoContent} from '../WhatWeDoContents'
     
             <View style={styles.ContentHolder}>
             <Text style={styles.Textstyle}>
-            Web Application Development
+            {item.subContents.subtitle}
             </Text>
-            <Text style={styles.Textstyle}>
-            Mobile Application Development
-            </Text>
-            <Text style={styles.Textstyle}>
-            Enterprise Solutions
-            </Text>
-            <Text style={styles.Textstyle}>
-            System Integration
-            </Text>
+            
             </View>
             
             </View>
