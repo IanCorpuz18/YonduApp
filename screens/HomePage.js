@@ -5,17 +5,17 @@ import OptionsHolder from '../components/OptionsHolder'
      render(){
     return(
     <View style={styles.Container}>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('WhatWeDoDrawer')}>
+        <OptionsHolder  onPress={() => this.props.navigation.navigate('MainDrawer')}>
         What We Do</OptionsHolder>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('IndustriesDrawer')}>
+        <OptionsHolder  onPress={() => this.props.navigation.navigate('MainDrawer')}>
         Industries</OptionsHolder>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('WhatWeDoDrawer')}>
+        <OptionsHolder  onPress={() => this.props.navigation.navigate('MainDrawer')}>
         Insights</OptionsHolder>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('WhatWeDoDrawer')}>
+        <OptionsHolder  onPress={() => this.props.navigation.navigate('MainDrawer')}>
         Careers</OptionsHolder>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('WhatWeDoDrawer')}>
+        <OptionsHolder  onPress={() => this.props.navigation.navigate('MainDrawer')}>
         About Yondu</OptionsHolder>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('WhatWeDoDrawer')}>
+        <OptionsHolder  onPress={() => this.props.navigation.navigate('MainDrawer')}>
         Contact Us</OptionsHolder>
     </View>
     )

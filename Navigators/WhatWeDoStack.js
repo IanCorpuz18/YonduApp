@@ -1,20 +1,18 @@
 import React,{ Component }  from 'react'
 import { createStackNavigator } from 'react-navigation'
 import Icon from 'react-native-vector-icons/Ionicons'
-import ManagedDeskService from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/ManageServiceContent/ManagedDeskService'
-import ManageExpService from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/ManageServiceContent/ManageExpService'
-import ManageSysAdmin from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/ManageServiceContent/ManageSysAdmin'
-import AwsCloud from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/ManageServiceContent/AwsCloud'
-import ManageAppService from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/ManageServiceContent/ManageAppService'
-import ManageServices from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/ManageServices'
-export default ManageServiceStack = createStackNavigator({
-    ManageServices:{
-      screen:ManageServices,
+import SoftDevStack from './SoftDevStack'
+import { SoftDev,GetQuota,Ty } from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoContents/SoftDev'
+import WhatWeDo from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDo'
+import { CyberSec,EnterpriseSol,ItStaffing,ManagedServices,TrainingsAndDev } from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoContents/'
+const WhatWeDoStack = createStackNavigator({
+    WhatWeDo:{
+      screen:WhatWeDo,
       navigationOptions: ({navigation}) =>  {
         return{ 
         
         headerTintColor:"black",
-        title: "ManageServices",
+        title: "What We Do",
         headerStyle:{
             backgroundColor:"white",
   
@@ -25,13 +23,63 @@ export default ManageServiceStack = createStackNavigator({
         
     }}
     },
-    ManagedDeskService:{
-        screen:ManagedDeskService,
+    SoftDev:{
+        screen:SoftDev,
+        navigationOptions: ({navigation}) =>  {
+          return{ 
+          
+          headerTintColor:"black",
+          title: "Software Development",
+          headerStyle:{
+              backgroundColor:"white",
+    
+          },
+          headerLeft:
+              <Icon name="md-arrow-back" onPress={() => navigation.goBack()}
+              size={30} color="black" style={{marginLeft:10}}/>,
+          
+      }}
+      },
+      Ty:{
+        screen:Ty,
+        navigationOptions: ({navigation}) =>  {
+          return{ 
+          
+          headerTintColor:"black",
+          title: "Software Development",
+          headerStyle:{
+              backgroundColor:"white",
+    
+          },
+          headerLeft:
+          <Icon name="md-arrow-back" onPress={() => navigation.goBack()}
+              size={30} color="black" style={{marginLeft:10}}/>,
+          
+      }}
+      }, GetQuota:{
+        screen:GetQuota,
+        navigationOptions: ({navigation}) =>  {
+          return{ 
+          
+          headerTintColor:"black",
+          title: "Software Development",
+          headerStyle:{
+              backgroundColor:"white",
+    
+          },
+          headerLeft:
+          <Icon name="md-arrow-back" onPress={() => navigation.goBack()}
+              size={30} color="black" style={{marginLeft:10}}/>,
+          
+      }}
+      },
+    ManagedServices:{
+        screen:ManagedServices,
         navigationOptions:  ({navigation}) =>  {
             return{ 
             
           headerTintColor:"black",
-          title: "ManagedDeskService",
+          title: "WebAppDev",
           headerStyle:{
               backgroundColor:"white",
     
@@ -45,13 +93,13 @@ export default ManageServiceStack = createStackNavigator({
           
       }}
       },
-      ManageExpService:{
-        screen:ManageExpService,
+      ItStaffing:{
+        screen:ItStaffing,
         navigationOptions: ({navigation}) =>  {
             return{ 
             
           headerTintColor:"black",
-          title: "ManageExpService",
+          title: "Enterprise Solution",
           headerStyle:{
               backgroundColor:"white",
     
@@ -65,13 +113,13 @@ export default ManageServiceStack = createStackNavigator({
           
       }}
       },
-      ManageSysAdmin:{
-        screen:ManageSysAdmin,
+      CyberSec:{
+        screen:CyberSec,
         navigationOptions: ({navigation}) =>  {
             return{ 
             
           headerTintColor:"black",
-          title: "ManageSysAdmin",
+          title: "System Integration",
           headerStyle:{
               backgroundColor:"white",
     
@@ -85,13 +133,13 @@ export default ManageServiceStack = createStackNavigator({
           
       }}
       },
-      ManageAppService:{
-        screen:ManageAppService,
+      TrainingsAndDev:{
+        screen:TrainingsAndDev,
         navigationOptions:  ({navigation}) =>  {
             return{ 
             
           headerTintColor:"black",
-          title: "ManageAppService",
+          title: "Mobile Application Development",
           headerStyle:{
               backgroundColor:"white",
     
@@ -104,14 +152,13 @@ export default ManageServiceStack = createStackNavigator({
               size={30} color="black" style={{marginRight:10}}/>,
           
       }}
-      },
-      AwsCloud:{
-        screen:AwsCloud,
+      },    EnterpriseSol:{
+        screen:EnterpriseSol,
         navigationOptions:  ({navigation}) =>  {
             return{ 
             
           headerTintColor:"black",
-          title: "AwsCloud",
+          title: "Mobile Application Development",
           headerStyle:{
               backgroundColor:"white",
     
@@ -127,9 +174,10 @@ export default ManageServiceStack = createStackNavigator({
       }
 },
     
-{   initialRouteName:("ManageServices"),
+{   initialRouteName:("WhatWeDo"),
     
     headerLayoutPreset:"center",
 }
     
 )
+export default WhatWeDoStack;

@@ -1,19 +1,15 @@
 import React,{ Component }  from 'react'
 import { createStackNavigator } from 'react-navigation'
 import Icon from 'react-native-vector-icons/Ionicons'
-import SoftDev from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/SoftDev'
-import WebAppDev from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/SoftDevContents/WebAppDev'
-import MobAppDev from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/SoftDevContents/MobAppDev'
-import EnterpriseSol from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/SoftDevContents/EnterpriseSol'
-import SystemInt from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/SoftDevContents/SystemInt'
-export default SoftDevStack = createStackNavigator({
+import { SoftDev,GetQuota,Ty } from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoContents/SoftDev'
+const WhatWeDoStack = createStackNavigator({
     SoftDev:{
       screen:SoftDev,
       navigationOptions: ({navigation}) =>  {
         return{ 
         
         headerTintColor:"black",
-        title: "What We Do",
+        title: "Software Development",
         headerStyle:{
             backgroundColor:"white",
   
@@ -24,13 +20,13 @@ export default SoftDevStack = createStackNavigator({
         
     }}
     },
-    WebAppDev:{
-        screen:WebAppDev,
+    GetQuota:{
+        screen:GetQuota,
         navigationOptions:  ({navigation}) =>  {
             return{ 
             
           headerTintColor:"black",
-          title: "WebAppDev",
+          title: "Software Development",
           headerStyle:{
               backgroundColor:"white",
     
@@ -44,13 +40,13 @@ export default SoftDevStack = createStackNavigator({
           
       }}
       },
-      EnterpriseSol:{
-        screen:EnterpriseSol,
+      Ty:{
+        screen:Ty,
         navigationOptions: ({navigation}) =>  {
             return{ 
             
           headerTintColor:"black",
-          title: "Enterprise Solution",
+          title: "Software Development",
           headerStyle:{
               backgroundColor:"white",
     
@@ -64,51 +60,13 @@ export default SoftDevStack = createStackNavigator({
           
       }}
       },
-      SystemInt:{
-        screen:SystemInt,
-        navigationOptions: ({navigation}) =>  {
-            return{ 
-            
-          headerTintColor:"black",
-          title: "System Integration",
-          headerStyle:{
-              backgroundColor:"white",
-    
-          },
-          headerLeft:
-          <Icon onPress={() => navigation.navigate('SoftDev')}
-          name="md-arrow-back" size={30} color="black" style={{marginLeft:10}}/>,
-          headerRight:
-              <Icon name="ios-menu" onPress={() => navigation.openDrawer()}
-              size={30} color="black" style={{marginRight:10}}/>,
-          
-      }}
-      },
-      MobAppDev:{
-        screen:MobAppDev,
-        navigationOptions:  ({navigation}) =>  {
-            return{ 
-            
-          headerTintColor:"black",
-          title: "Mobile Application Development",
-          headerStyle:{
-              backgroundColor:"white",
-    
-          },
-          headerLeft:
-          <Icon onPress={() => navigation.navigate('SoftDev')}
-          name="md-arrow-back" size={30} color="black" style={{marginLeft:10}}/>,
-          headerRight:
-              <Icon name="ios-menu" onPress={() => navigation.openDrawer()}
-              size={30} color="black" style={{marginRight:10}}/>,
-          
-      }}
-      }
 },
     
 {   initialRouteName:("SoftDev"),
     
     headerLayoutPreset:"center",
+    // headerMode:"none"
 }
     
 )
+export default WhatWeDoStack;
