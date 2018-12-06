@@ -18,7 +18,7 @@ const MainDrawer = createDrawerNavigator({
   "Insights":Insights,
   "Careers":Careers,
   "About Yondu": AboutYondu,
-  "ContactUs":ContactUs
+  "Contact Us":ContactUs
   
 }, {
     contentComponent: Drawer,

@@ -73,7 +73,7 @@ Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
 
 </View>
 <View style={styles.ButtongHolder}>
-<Button title="Get Quota" />
+<Button title="Get Quota" onPress={() => this.props.navigation.navigate('GetQuota')} />
 </View>
     </View>
     )
