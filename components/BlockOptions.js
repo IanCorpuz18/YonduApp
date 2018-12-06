@@ -1,37 +1,45 @@
 import React, { Component } from 'react'
 import {View,Text,StyleSheet} from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
-
+import {WhateWeDoContent} from '../WhatWeDoContents'
    class BlockOptionsView extends Component{
+       state={
+           items:WhateWeDoContent
+       }
      render(){
-    return(
-        <View style={styles.BlockHolder}>
-        <View style={styles.IconTitleHolder}>
-        <View style={styles.IconHolder}>
-        <Icon name="ios-desktop" size={30}/>
-        </View>
-        <View style={styles.TitleTextHolder}>
-        <Text style={styles.TextTitle}>
-        Software Development
-        </Text>
-        </View>
-        </View>
 
-        <View style={styles.ContentHolder}>
-        <Text style={styles.Textstyle}>
-        Web Application Development
-        </Text>
-        <Text style={styles.Textstyle}>
-        Mobile Application Development
-        </Text>
-        <Text style={styles.Textstyle}>
-        Enterprise Solutions
-        </Text>
-        <Text style={styles.Textstyle}>
-        System Integration
-        </Text>
-        </View>
-        </View>
+    return(
+        <View>
+        {this.state.items.map((item,key) => {return(
+            <View style={styles.BlockHolder} key={key}>
+            <View style={styles.IconTitleHolder}>
+            <View style={styles.IconHolder}>
+            <Icon name={item.icon} size={30}/>
+            </View>
+            <View style={styles.TitleTextHolder}>
+            <Text style={styles.TextTitle}>
+            {item.title}
+            </Text>
+            </View>
+            </View>
+    
+            <View style={styles.ContentHolder}>
+            <Text style={styles.Textstyle}>
+            Web Application Development
+            </Text>
+            <Text style={styles.Textstyle}>
+            Mobile Application Development
+            </Text>
+            <Text style={styles.Textstyle}>
+            Enterprise Solutions
+            </Text>
+            <Text style={styles.Textstyle}>
+            System Integration
+            </Text>
+            </View>
+            
+            </View>
+            )})}</View>
     )
     }
     }
@@ -42,16 +50,22 @@ import Icon from 'react-native-vector-icons/Ionicons'
             justifyContent: 'center',
             alignItems: 'center',
             margin: 10,
+            marginLeft:10 ,
+            marginRight: 10,
+            elevation:1,
+            backgroundColor: "white",
         },
         IconTitleHolder:{
-            flex:1,
+            flex:2,
             flexDirection: 'row',
         },
         IconHolder:{
             flex:3,
+            alignItems: 'center',
         },
         TitleTextHolder:{
-            flex:8,
+            flex:10,
+            alignItems: 'flex-start',
         },
         TextTitle:{
             fontSize:17,

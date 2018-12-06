@@ -21,12 +21,7 @@ import OptionsHolder from '../../../components/OptionsHolder'
         Enterprise Solutions</OptionsHolder> */}
         <ScrollView>
         <BlockOptionsView/>
-        <BlockOptionsView/>
-        <BlockOptionsView/>
-        <BlockOptionsView/>
-        <BlockOptionsView/>
-        <BlockOptionsView/>
-        <BlockOptionsView/>
+      
         </ScrollView>
 
     </View>
