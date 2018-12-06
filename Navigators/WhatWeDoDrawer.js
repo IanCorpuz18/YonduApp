@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, ScrollView, Dimensions, SafeAreaView, Image, TouchableOpacity } from 'react-native'
 import { createDrawerNavigator, DrawerItems } from 'react-navigation';
 import SoftDevStack from '../Navigators/SoftDevStack'
-import ManageServices from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/ManageServices'
 import ItStaffing from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/ItStaffing';
 import CyberSec from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/CyberSec';
 import TrainingAndDev from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/TrainingAndDev';
 import EnterpriseSol from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/EnterpriseSol'
-
+import ManageServiceStack from '../Navigators/ManageServiceStack'
 const Drawer = (props) => (
   <SafeAreaView style={{ flex: 1, width:'100%' }}>
 
@@ -19,7 +18,7 @@ const Drawer = (props) => (
 )
 export default WhatWeDo = createDrawerNavigator({
   "Software Development":SoftDevStack,
-  "Manage Services":ManageServices,
+  "Manage Services":ManageServiceStack,
   "IT Staffing":ItStaffing,
   "Cyber Security":CyberSec,
   "Training and Development": TrainingAndDev,

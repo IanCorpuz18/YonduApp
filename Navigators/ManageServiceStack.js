@@ -1,19 +1,20 @@
 import React,{ Component }  from 'react'
 import { createStackNavigator } from 'react-navigation'
 import Icon from 'react-native-vector-icons/Ionicons'
-import SoftDev from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/SoftDev'
-import WebAppDev from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/SoftDevContents/WebAppDev'
-import MobAppDev from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/SoftDevContents/MobAppDev'
-import EnterpriseSol from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/SoftDevContents/EnterpriseSol'
-import SystemInt from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/SoftDevContents/SystemInt'
-export default SoftDevStack = createStackNavigator({
-    SoftDev:{
-      screen:SoftDev,
+import ManagedDeskService from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/ManageServiceContent/ManagedDeskService'
+import ManageExpService from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/ManageServiceContent/ManageExpService'
+import ManageSysAdmin from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/ManageServiceContent/ManageSysAdmin'
+import AwsCloud from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/ManageServiceContent/AwsCloud'
+import ManageAppService from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/ManageServiceContent/ManageAppService'
+import ManageServices from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoDrawerContents/ManageServices'
+export default ManageServiceStack = createStackNavigator({
+    ManageServices:{
+      screen:ManageServices,
       navigationOptions: ({navigation}) =>  {
         return{ 
         
         headerTintColor:"black",
-        title: "What We Do",
+        title: "ManageServices",
         headerStyle:{
             backgroundColor:"white",
   
@@ -24,13 +25,13 @@ export default SoftDevStack = createStackNavigator({
         
     }}
     },
-    WebAppDev:{
-        screen:WebAppDev,
+    ManagedDeskService:{
+        screen:ManagedDeskService,
         navigationOptions:  ({navigation}) =>  {
             return{ 
             
           headerTintColor:"black",
-          title: "WebAppDev",
+          title: "ManagedDeskService",
           headerStyle:{
               backgroundColor:"white",
     
@@ -44,13 +45,13 @@ export default SoftDevStack = createStackNavigator({
           
       }}
       },
-      EnterpriseSol:{
-        screen:EnterpriseSol,
+      ManageExpService:{
+        screen:ManageExpService,
         navigationOptions: ({navigation}) =>  {
             return{ 
             
           headerTintColor:"black",
-          title: "Enterprise Solution",
+          title: "ManageExpService",
           headerStyle:{
               backgroundColor:"white",
     
@@ -64,13 +65,13 @@ export default SoftDevStack = createStackNavigator({
           
       }}
       },
-      SystemInt:{
-        screen:SystemInt,
+      ManageSysAdmin:{
+        screen:ManageSysAdmin,
         navigationOptions: ({navigation}) =>  {
             return{ 
             
           headerTintColor:"black",
-          title: "System Integration",
+          title: "ManageSysAdmin",
           headerStyle:{
               backgroundColor:"white",
     
@@ -84,13 +85,33 @@ export default SoftDevStack = createStackNavigator({
           
       }}
       },
-      MobAppDev:{
-        screen:MobAppDev,
+      ManageAppService:{
+        screen:ManageAppService,
         navigationOptions:  ({navigation}) =>  {
             return{ 
             
           headerTintColor:"black",
-          title: "Mobile Application Development",
+          title: "ManageAppService",
+          headerStyle:{
+              backgroundColor:"white",
+    
+          },
+          headerLeft:
+          <Icon onPress={() => navigation.navigate('SoftDev')}
+          name="md-arrow-back" size={30} color="black" style={{marginLeft:10}}/>,
+          headerRight:
+              <Icon name="ios-menu" onPress={() => navigation.openDrawer()}
+              size={30} color="black" style={{marginRight:10}}/>,
+          
+      }}
+      },
+      AwsCloud:{
+        screen:AwsCloud,
+        navigationOptions:  ({navigation}) =>  {
+            return{ 
+            
+          headerTintColor:"black",
+          title: "AwsCloud",
           headerStyle:{
               backgroundColor:"white",
     
@@ -106,7 +127,7 @@ export default SoftDevStack = createStackNavigator({
       }
 },
     
-{   initialRouteName:("SoftDev"),
+{   initialRouteName:("ManageServices"),
     
     headerLayoutPreset:"center",
 }

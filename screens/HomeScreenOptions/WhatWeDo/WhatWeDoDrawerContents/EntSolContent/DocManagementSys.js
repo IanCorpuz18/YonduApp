@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 import {View,Text,StyleSheet} from 'react-native'
 
-   class CyberSec extends Component{
+   class DocManagementSys extends Component{
      render(){
     return(
     <View>
-        <Text>CyberSec</Text>
+        <Text>DocManagementSys</Text>
     </View>
     )
     }
     }
-export default CyberSec;
-
+export default DocManagementSys;
