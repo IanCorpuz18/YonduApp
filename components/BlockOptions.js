@@ -24,9 +24,16 @@ import {WhateWeDoContent} from '../WhatWeDoContents'
             </View>
     
             <View style={styles.ContentHolder}>
-            <Text style={styles.Textstyle}>
-            {item.subContents.subtitle}
-            </Text>
+            {item.subContents.map((item,key) =>{
+                return(  
+            
+                    <Text style={styles.Textstyle} key={key}>
+                    {item}
+                    </Text>
+                    )
+            }) 
+                }
+          
             
             </View>
             
@@ -36,24 +43,31 @@ import {WhateWeDoContent} from '../WhatWeDoContents'
     }
     }
     const styles = StyleSheet.create({
-     
+        
         BlockHolder:{
             flex:1,
             justifyContent: 'center',
-            alignItems: 'center',
-            margin: 10,
-            marginLeft:10 ,
-            marginRight: 10,
-            elevation:1,
+            alignItems: 'flex-start',
+            margin: 20,
+            // marginLeft:10 ,
+            // marginRight: 10,
+            elevation:20,
             backgroundColor: "white",
+            width:"80%",
+            borderLeftColor: "#A5FCCB",
+            borderLeftWidth: 4,
+            paddingVertical:10
         },
         IconTitleHolder:{
             flex:2,
             flexDirection: 'row',
+            justifyContent:"center",
+            alignItems: 'center',
         },
         IconHolder:{
             flex:3,
-            alignItems: 'center',
+            alignItems: 'flex-end',
+            paddingRight: 10,
         },
         TitleTextHolder:{
             flex:10,
@@ -64,7 +78,9 @@ import {WhateWeDoContent} from '../WhatWeDoContents'
             fontWeight: 'bold',
         },
         ContentHolder:{
-            flex:4
+            flex:4,
+            alignItems:"flex-start",
+            paddingLeft: 65,
         },
         Textstyle:{
             fontSize:15,

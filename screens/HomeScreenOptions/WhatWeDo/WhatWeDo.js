@@ -3,28 +3,20 @@ import {View,Text,StyleSheet,ScrollView} from 'react-native'
 import BlockOptionsView from '../../../components/BlockOptions'
 import Icon from 'react-native-vector-icons/Ionicons'
 import OptionsHolder from '../../../components/OptionsHolder'
+import CustomButton from '../../../components/CustomButton';
    class WhatWeDo extends Component{
      render(){
     return(
         <View style={styles.Container}>
-        {/* <OptionsHolder  onPress={() => this.props.navigation.navigate('SoftDev')}>
-        Soft Dev</OptionsHolder>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('ManagedServices')}>
-        Managed Services</OptionsHolder>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('SoftDevStack')}>
-        IT Staffing</OptionsHolder>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('SoftDevStack')}>
-        Cyber Security</OptionsHolder>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('SoftDevStack')}>
-        Trainings and Development</OptionsHolder>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('SoftDevStack')}>
-        Enterprise Solutions</OptionsHolder> */}
-        <ScrollView>
+      
+        <ScrollView contentContainerStyle={{alignItems:"center"}}>
         <BlockOptionsView/>
       
         </ScrollView>
-
-    </View>
+        <View style={styles.ButtonHolder}>
+        <CustomButton elevation={{elevation:10}} bgColor={{backgroundColor:"#66CC99"}}>Get Quote</CustomButton>
+        </View>
+  </View>
     )
     }
     } const styles = StyleSheet.create({
@@ -55,6 +47,6 @@ import OptionsHolder from '../../../components/OptionsHolder'
         Textstyle:{
             fontSize:15,
             color:"#6E7F8D"
-        }
+        },
         })
 export default WhatWeDo;
