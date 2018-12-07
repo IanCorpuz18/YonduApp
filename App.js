@@ -1,11 +1,12 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
+import Ty from './screens/HomeScreenOptions/WhatWeDo/WhatWeDoContents/SoftDev/Ty'
 import GeneralSwitchNav from './Navigators/GeneralSwitchNav'
 export default class App extends Component {
   render() {
     return (
-      <GeneralSwitchNav/>
+      <Ty/>
     );
   }
 }

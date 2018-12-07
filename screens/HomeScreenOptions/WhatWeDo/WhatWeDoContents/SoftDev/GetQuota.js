@@ -31,20 +31,7 @@ import {View,Text,StyleSheet, TouchableOpacity, TextInput} from 'react-native'
 </Picker>
         </View>
         </View>
-        {/* <View style={styles.Holder1}>
-        <View style={styles.InputHolder}>
-        <TextInput style={styles.InputStyle} placeholder="Full Name" />
-        </View>
-        <View style={styles.InputHolder}>
-        <TextInput style={styles.InputStyle} placeholder="Company" />
-        </View>
-        <View style={styles.InputHolder}>
-        <TextInput style={styles.InputStyle} placeholder="Email" />
-        </View>
-        <View style={styles.InputHolder}>
-        <TextInput style={styles.InputStyle} placeholder="Contact Number" />
-        </View>
-        </View> */}
+      
     </View>
     )
     }
