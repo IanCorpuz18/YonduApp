@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, ScrollView, Dimensions, SafeAreaView, Image, TouchableOpacity } from 'react-native'
 import { createDrawerNavigator, DrawerItems } from 'react-navigation';
 import WhatWeDoStack from './WhatWeDoStack'
+import IndustriesStack from './IndustriesStack'
 import { AboutYondu,ContactUs,Industries,Insights,Careers } from '../screens/HomeScreenOptions'
 const Drawer = (props) => (
   <SafeAreaView style={{ flex: 1, width:'100%' }}>
@@ -14,7 +15,7 @@ const Drawer = (props) => (
 )
 const MainDrawer = createDrawerNavigator({
   "What we do":WhatWeDoStack,
-  "Industries":Industries,
+  "Industries":IndustriesStack,
   "Insights":Insights,
   "Careers":Careers,
   "About Yondu": AboutYondu,

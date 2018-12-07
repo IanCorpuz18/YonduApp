@@ -8,6 +8,7 @@ import LocalImage from '../components/LocalImage'
     <TouchableOpacity onPress={() => this.props.navigation.navigate('HomePage')}>
         <LocalImage
          source={require('../assets/yondu.jpg')} 
+         value={150}
          originalWidth={361}
          originalHeight={79}
         />
@@ -21,6 +22,7 @@ import LocalImage from '../components/LocalImage'
         flex:1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor:"white"
     }
 
     })

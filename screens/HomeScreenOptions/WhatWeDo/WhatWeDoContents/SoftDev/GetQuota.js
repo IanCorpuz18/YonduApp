@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
-import {View,Text,StyleSheet, TouchableOpacity, TextInput} from 'react-native'
-
+import {View,Text,StyleSheet, TouchableOpacity, TextInput, Picker, Button} from 'react-native'
+import {Formik} from 'formik'
+import * as Yup from 'yup'
+import {SolutionContent,ServicesContent} from '../../../../../GetQuotaContent'
    class GetQuota extends Component{
        state={
-        Software:""
+        SolutionsList:SolutionContent,
+        Solutions:"Software Development",
+        ServicesList:ServicesContent,
+        Services:""
        }
      render(){
     return(
     <View style={styles.Container}>
-        {/* <TouchableOpacity onPress={() => this.props.navigation.navigate('Ty')}>
-        <Text>Submit</Text>
-        </TouchableOpacity> */}
         <View style={styles.Holder}>
         <View style={styles.PickerLabelHolder}>
         <Text style={styles.PickerLabelText}>
@@ -19,32 +21,111 @@ import {View,Text,StyleSheet, TouchableOpacity, TextInput} from 'react-native'
         </View>
         <View style={styles.PickerHolder}>
         <Picker
+  selectedValue={this.state.Solutions}
+  style={{ height: 100, width: "90%" }}
+  onValueChange={(itemValue, itemIndex) => this.setState({Solutions: itemValue})}>
+  {
+      this.state.SolutionsList.map((item,key)=>{
+      return(
+        <Picker.Item label={item.name} value={item.value} key={key}/>
+      )
+  })} 
+  </Picker>
+        <Picker
   selectedValue={this.state.Software}
-  style={styles.PickerStyle}
+  style={{ height: 100, width: "90%" }}
   onValueChange={(itemValue, itemIndex) => this.setState({Software: itemValue})}>
-  <Picker.Item label="Select Software" value="Select" color="#9A9D9F" />
-  <Picker.Item label="Web App" value="WebApp" color="#9A9D9F" />
-  <Picker.Item label="Mobile App" value="MobileApp" color="#9A9D9F" />
-  <Picker.Item label="Enterprise Solution" value="EnterpriseSol" color="#9A9D9F" />
-  <Picker.Item label="System Integration" value="SystemInt" color="#9A9D9F" />
   
-</Picker>
+  { 
+      this.state.ServicesList[this.state.Solutions].map((item,key)=>{
+      return(
+        <Picker.Item label={item.name} value={item.value} key={key}/>
+      )
+  })}
+          </Picker>
+  
         </View>
         </View>
-      
+        <Formik style={styles.Formik}
+          initialValues= {{ email: '', password: '', confirmPassword: '' }}
+          onSubmit={this._handleSubmit}
+          validationSchema={Yup.object().shape({
+            email: Yup.string()
+              .email()
+              .required('Email is required'),
+            password: Yup.string()
+              .min(6)
+              .required('Password is required'),
+            confirmPassword: 
+              Yup.string().oneOf([Yup.ref('password', null)], 
+              'Confirm Password must matched Password',
+              ).required('Confirm Password is required')
+          })}
+          render={({ 
+            values, 
+            handleSubmit, 
+            setFieldValue, 
+            errors, 
+            touched, 
+            setFieldTouched,
+            isValid,
+            isSubmitting
+          }) => (
+            <React.Fragment>
+              <TextInput 
+              placeholder="Name"
+              style={{
+                  backgroundColor:"white",
+                  borderBottomColor:"gray",
+                  borderBottomWidth:1,
+                  width:"90%",
+                  alignContent:"center"
+              }}
+                />
+              <TextInput 
+                placeholder="Company"
+                />
+              <TextInput 
+                placeholder="Email"
+                />
+                 <TextInput 
+                placeholder="Phone Number"
+                />
+              <Button 
+              backgroundColor='blue' 
+              style={styles.button} 
+              title='Submit' 
+              onPress={handleSubmit}
+            //   disabled={!isValid}
+              loading={isSubmitting}
+              />
+            </React.Fragment>
+          )}
+        />
     </View>
     )
     }
     }
     const styles = StyleSheet.create({
+        Formik:{
+
+            alignItems:"center",
+            justifyContent: 'center',
+        },
     Container:{ 
-        flex:1
+        flex:1,
+            alignItems:"center",
+            justifyContent: 'center',
     },
     Holder:{
-        flex:1
+        flex:1,
+        backgroundColor:"yellow",
+        width:"100%"
     },
     PickerHolder:{
-        flex:1
+        // flex:1,
+        width:"90%",
+        backgroundColor:"green"
     },
     PickerLabelText:{
         fontSize:20,

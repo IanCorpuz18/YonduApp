@@ -1,13 +1,40 @@
 import React, { Component } from 'react'
 import {View,Text,StyleSheet} from 'react-native'
-
+import TitleAndSub from '../../../components/TitleandSub'
+import ChoiceTiles from '../../../components/ChoiceTiles'
    class Industries extends Component{
      render(){
     return(
-    <View>
-        <Text>Industries</Text>
+    <View style={styles.Container}><View style={styles.holder}>
+        <TitleAndSub subWidth={{width:"50%"}} Title={"Lorem ipsum dolor sit amet"}
+         Subtitle={"Quisque a est vel tortor lobortis scelerisque vitae id risus"} />
+         </View>
+<View style={styles.BlockIcons}>
+    <ChoiceTiles/>
+    <ChoiceTiles/>
+    <ChoiceTiles/>
+    <ChoiceTiles/>
+
+</View>
+
     </View>
     )
     }
     }
+    const styles = StyleSheet.create({
+    Container:{ 
+        flex:1,
+        backgroundColor:"white"
+    },
+    BlockIcons:{
+        flex:6,
+        // justifyContent:"center",
+        alignItems:"center"
+    },
+    holder:{
+        flex:2,
+        backgroundColor:"green",
+        justifyContent:"center"
+    }
+    })
 export default Industries;

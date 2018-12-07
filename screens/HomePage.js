@@ -7,7 +7,7 @@ import OptionsHolder from '../components/OptionsHolder'
     <View style={styles.Container}>
         <OptionsHolder  onPress={() => this.props.navigation.navigate('MainDrawer')}>
         What We Do</OptionsHolder>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('MainDrawer')}>
+        <OptionsHolder  onPress={() => this.props.navigation.navigate('IndustriesStack')}>
         Industries</OptionsHolder>
         <OptionsHolder  onPress={() => this.props.navigation.navigate('MainDrawer')}>
         Insights</OptionsHolder>
