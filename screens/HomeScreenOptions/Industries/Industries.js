@@ -6,15 +6,12 @@ import ChoiceTiles from '../../../components/ChoiceTiles'
      render(){
     return(
     <View style={styles.Container}><View style={styles.holder}>
-        <TitleAndSub subWidth={{width:"50%"}} Title={"Lorem ipsum dolor sit amet"}
+        <TitleAndSub marginTop={{marginTop:20}} subWidth={{width:"50%"}} Title={"Lorem ipsum dolor sit amet"}
          Subtitle={"Quisque a est vel tortor lobortis scelerisque vitae id risus"} />
          </View>
 <View style={styles.BlockIcons}>
+    
     <ChoiceTiles/>
-    <ChoiceTiles/>
-    <ChoiceTiles/>
-    <ChoiceTiles/>
-
 </View>
 
     </View>
@@ -24,17 +21,20 @@ import ChoiceTiles from '../../../components/ChoiceTiles'
     const styles = StyleSheet.create({
     Container:{ 
         flex:1,
-        backgroundColor:"white"
+        backgroundColor:"white",
     },
     BlockIcons:{
-        flex:6,
-        // justifyContent:"center",
-        alignItems:"center"
+        flex:4,
+        alignItems:"center",
+        width:"100%",
+        flexWrap:"wrap",
+        flexDirection:"row",
+            // backgroundColor:"blue"
     },
     holder:{
-        flex:2,
-        backgroundColor:"green",
-        justifyContent:"center"
+        flex:1,
+        // backgroundColor:"green",
+        
     }
     })
 export default Industries;

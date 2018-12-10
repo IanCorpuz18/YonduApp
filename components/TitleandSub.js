@@ -4,7 +4,7 @@ import {View,Text,StyleSheet} from 'react-native'
    class TitleAndSub extends Component{
      render(){
     return(
-        <View style={styles.MainTextHolder}>
+        <View style={[styles.MainTextHolder, this.props.marginTop]}>
         <View style={styles.TitleTextHolder}>
         <Text style={styles.Titletext}>
         {this.props.Title}
@@ -23,7 +23,7 @@ import {View,Text,StyleSheet} from 'react-native'
         MainTextHolder:{
             justifyContent:"center",
             alignItems:"center",
-            flex:1
+            flex:1,
         },
         TitleTextHolder:{
             flex:1,

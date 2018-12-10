@@ -1,42 +1,39 @@
 import React, { Component } from 'react'
-import {View,Text,StyleSheet} from 'react-native'
+import {View,Text,StyleSheet, TouchableOpacity} from 'react-native'
 import LocalImage from '../components/LocalImage'
+import {IndustriesContent} from '../IndustriesContent'
    class ChoiceTiles extends Component{
+       state={
+        IndustriesList:IndustriesContent,
+        IndustriesChoice:""
+       }
      render(){
-    return(
-   <View style={styles.RowHolder}>
-
-<View style={styles.IconTextHolder}>
-<LocalImage source={require('../assets/industries/ict.png')} 
+    return this.state.IndustriesList.map((item,key) => {
+     return(
+<View style={styles.IconTextHolder} key={key}>
+<TouchableOpacity onPress={this.props.onPress}>
+<LocalImage source={item.img} 
          value={350}
          originalWidth={128}
          originalHeight={128}/>
-<Text style={styles.LabelStyle}>ICT</Text>
-</View>
-<View style={styles.IconTextHolder}>
-<LocalImage source={require('../assets/industries/bpo.png')} 
-         value={350}
-         originalWidth={128}
-         originalHeight={128}/>
-<Text style={styles.LabelStyle}>BPO</Text>
+</TouchableOpacity>
+<Text style={styles.LabelStyle}>{item.name}</Text>
 </View>
 
 
-</View>
-    )
+
+   )})
+ 
+    
     }
     }
     const styles = StyleSheet.create({
-        RowHolder:{
-            flex:1,
-            flexDirection:"row",
-            // justifyContent:"center",
-            // alignItems:"center"
-        },
+     
         IconTextHolder:{
-            flex:1,
+            height:140,
             justifyContent:"center",
-            alignItems:"center"
+            alignItems:"center",
+            width:"50%",
         }
     })
 export default ChoiceTiles;
