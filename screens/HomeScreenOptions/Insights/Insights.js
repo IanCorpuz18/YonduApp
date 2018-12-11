@@ -12,7 +12,7 @@ import InsightsItem from '../../../components/InsightsItem'
     <View style={styles.Container}>
 
            <InsightsItem onPress={ () => this.props.navigation.navigate('Article') }/>
-
+            
     </View>
     )
     }

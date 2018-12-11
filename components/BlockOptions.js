@@ -51,12 +51,12 @@ import {WhateWeDoContent} from '../Arrays/WhatWeDoContents'
             margin: 20,
             // marginLeft:10 ,
             // marginRight: 10,
-            elevation:20,
+            elevation:10,
             backgroundColor: "white",
-            width:"80%",
+            width:"90%",
             borderLeftColor: "#A5FCCB",
             borderLeftWidth: 4,
-            paddingVertical:10
+            paddingVertical:15
         },
         IconTitleHolder:{
             flex:2,

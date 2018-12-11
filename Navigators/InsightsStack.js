@@ -37,7 +37,7 @@ const InsightsStack = createStackNavigator({
           <View style={{backgroundColor:"white",justifyContent:"center",alignItems:"center"}}><Icon name="ios-share" onPress={() => navigation.openDrawer()}
           size={30} color="black" style={{marginLeft:10}}/></View>,
           headerLeft:
-              <Icon name="ios-arrow-back" onPress={() => navigation.openDrawer()}
+              <Icon name="ios-arrow-back" onPress={() => navigation.navigate('Insights')}
               size={30} color="white" style={{marginLeft:10}}/>,
           
       }}

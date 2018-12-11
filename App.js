@@ -5,11 +5,13 @@ import Ty from './screens/HomeScreenOptions/WhatWeDo/WhatWeDoContents/SoftDev/Ty
 import GeneralSwitchNav from './Navigators/GeneralSwitchNav'
 import GetQuota from './screens/HomeScreenOptions/WhatWeDo/WhatWeDoContents/SoftDev/GetQuota'
 import IndustriesStack from './Navigators/IndustriesStack'
+import SoftDev from './screens/HomeScreenOptions/WhatWeDo/WhatWeDoContents/SoftDev/SoftDev'
 import InsightsStack from './Navigators/InsightsStack'
+import Article from './screens/HomeScreenOptions/Insights/InsightsContent/Article'
 export default class App extends Component {
   render() {
     return (
-      <GetQuota/>
+      <InsightsStack/>
     );
   }
 }

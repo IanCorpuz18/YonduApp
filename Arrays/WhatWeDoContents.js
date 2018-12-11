@@ -14,7 +14,7 @@ export const WhateWeDoContent =[
 {
     id:1,
     title:"Manage Services",
-    icon:"ios-filing",
+    icon:"ios-cloud-upload",
     subContents:[
         "Managed Desktop Service",
         "Managed Expert Service",
