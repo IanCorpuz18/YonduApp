@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import {View,Text,StyleSheet, TouchableOpacity, TextInput, Picker, Button} from 'react-native'
 import {Formik} from 'formik'
 import * as Yup from 'yup'
+import MessageInput from '../../../../../components/MessageInput'
+import CustomButton from '../../../../../components/CustomButton'
 import FormikInput from '../../../../../components/FormikInput'
-import {SolutionContent,ServicesContent} from '../../../../../Arrays/GetQuotaContent'
+import {SolutionContent,ServicesContent} from 'YonduApp/Arrays/GetQuotaContent'
    class GetQuota extends Component{
        state={
         SolutionsList:SolutionContent,
@@ -15,11 +17,7 @@ import {SolutionContent,ServicesContent} from '../../../../../Arrays/GetQuotaCon
     return(
     <View style={styles.Container}>
         <View style={styles.Holder}>
-        <View style={styles.PickerLabelHolder}>
-        <Text style={styles.PickerLabelText}>
-        CHOOSE
-        </Text>
-        </View>
+        
         <View style={styles.PickerHolder}>
         <View style={styles.PickerView}>
         <Picker   mode="dropdown"
@@ -61,8 +59,7 @@ import {SolutionContent,ServicesContent} from '../../../../../Arrays/GetQuotaCon
             name: Yup.string().required('Required'),
             company: Yup.string().required('Required'),
             email: Yup.string().required('Required')
-            .email('Email Required')
-            ,
+            .email('Invalid Email'),
             phoneNum: Yup.string().required('Required')
             .min(11,"Not a phone number!"),
             message: Yup.string().required('Required'),
@@ -80,31 +77,41 @@ import {SolutionContent,ServicesContent} from '../../../../../Arrays/GetQuotaCon
             isSubmitting
           }) => (
             <React.Fragment>
+                
              <FormikInput placeholder={"Name"}
              value={values.name}
              onChangeText={handleChange('name')}
-             /> 
-             <Text>{errors.name}</Text>
+             Text={errors.name}
+             />
+
               <FormikInput placeholder={"Company"}
              value={values.company}
-             onChangeText={handleChange('company')}/>
+             onChangeText={handleChange('company')}
+             Text={errors.company}/>
+
+
               <FormikInput placeholder={"Email"}
              value={values.email}
-             onChangeText={handleChange('email')}/>
+             onChangeText={handleChange('email')}
+             Text={errors.email}/>
+
+
               <FormikInput placeholder={"Phone Number"}
              value={values.phoneNum}
-             onChangeText={handleChange('phoneNum')}/>
-              <FormikInput placeholder={"Message"}
+             onChangeText={handleChange('phoneNum')}
+             Text={errors.phoneNum}/>
+
+
+              <MessageInput placeholder={"Message"}
              value={values.message}
-             onChangeText={handleChange('message')}/>
-              <Button 
-              backgroundColor='blue' 
-              style={styles.button} 
-              title='Submit' 
-              onPress={handleSubmit}
-              disabled={!isValid}
-              loading={isSubmitting}
-              />
+             onChangeText={handleChange('message')}
+             Text={errors.message}
+             multiline={true}
+             editable={true}
+             />
+             <CustomButton
+             onPress={handleSubmit}
+             >Submit</CustomButton>
             </React.Fragment>
           )}
         />
@@ -132,7 +139,7 @@ import {SolutionContent,ServicesContent} from '../../../../../Arrays/GetQuotaCon
     },
     Holder:{
         flex:1,
-        backgroundColor:"yellow",
+        backgroundColor:"white",
         width:"100%",
             alignItems:"center",
             justifyContent: 'center',

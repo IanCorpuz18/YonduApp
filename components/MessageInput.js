@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {View,Text,StyleSheet,TextInput} from 'react-native'
 
-const FormikInput = props => (
+const MessageInput = props => (
     <View style={styles.MainHolder}>
         <View style={[styles.Holder, props.border]}>
         <TextInput style={[styles.TextInput, props.styleInput]}
@@ -15,20 +15,22 @@ const FormikInput = props => (
     const styles = StyleSheet.create({
     TextInput:{ 
     backgroundColor:"white",
-    width:"90%",    
+    width:"100%",    
     alignContent:"center"
     },
+    Holder:{
+        backgroundColor:"white",
+        alignItems:"center",
+        borderBottomColor:"#C5C5C5",
+         borderBottomWidth:1,
+         width:"90%",
+         flex:2,
+         justifyContent:"flex-start"
+    },
     MainHolder:{
-        flex:1,
+        flex:3,
         width:"100%",
         alignItems:"center"
     },
-    Holder:{
-        width:"90%",
-        backgroundColor:"white",
-        borderBottomColor:"#C5C5C5",
-        borderBottomWidth:1,
-
-    }
     })
-export default FormikInput;
+export default MessageInput;

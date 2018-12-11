@@ -99,12 +99,14 @@ import Icon from 'react-native-vector-icons/Ionicons'
       color:"white"
     },
     Content:{
-      flex:5
+      flex:5,
+      backgroundColor:"white"
     },
     TagDateholder:{
       flex:2,
       flexDirection:"row",
-      justifyContent:"center"
+      justifyContent:"center",
+      // backgroundColor:"white"
     },
     Tag:{
       flex:1,
@@ -125,7 +127,8 @@ import Icon from 'react-native-vector-icons/Ionicons'
     },
     ContextHolder:{
       flex:20,
-      paddingHorizontal:10
+      paddingHorizontal:10,
+      // backgroundColor:"white"
     },
     Context:{
       color:"#4A4A4A",

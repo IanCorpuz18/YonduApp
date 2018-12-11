@@ -11,7 +11,7 @@ import Article from './screens/HomeScreenOptions/Insights/InsightsContent/Articl
 export default class App extends Component {
   render() {
     return (
-      <InsightsStack/>
+      <GetQuota/>
     );
   }
 }
