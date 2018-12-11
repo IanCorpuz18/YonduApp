@@ -15,7 +15,6 @@ const InsightsStack = createStackNavigator({
         title: "Insights",
         headerStyle:{
             backgroundColor:"white",
-  
         },
         headerLeft:
             <Icon name="ios-menu" onPress={() => navigation.openDrawer()}
@@ -25,20 +24,9 @@ const InsightsStack = createStackNavigator({
     },Article:{
         screen:Article,
         navigationOptions: ({navigation}) =>  {
+            
           return{ 
-          
-          headerTintColor:"black",
-        //   title: "Industries",
-          headerStyle:{
-              backgroundColor:"transparent",
-    
-          }, 
-          headerRight:
-          <View style={{backgroundColor:"white",justifyContent:"center",alignItems:"center"}}><Icon name="ios-share" onPress={() => navigation.openDrawer()}
-          size={30} color="black" style={{marginLeft:10}}/></View>,
-          headerLeft:
-              <Icon name="ios-arrow-back" onPress={() => navigation.navigate('Insights')}
-              size={30} color="white" style={{marginLeft:10}}/>,
+            header:null
           
       }}
       }
