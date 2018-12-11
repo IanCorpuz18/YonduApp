@@ -11,7 +11,7 @@ import ChoiceTiles from '../../../components/ChoiceTiles'
          </View>
 <View style={styles.BlockIcons}>
     
-    <ChoiceTiles/>
+    <ChoiceTiles />
 </View>
 
     </View>

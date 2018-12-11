@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import {View,Text,StyleSheet, TouchableOpacity, TextInput, Picker, Button} from 'react-native'
 import {Formik} from 'formik'
 import * as Yup from 'yup'
-import {SolutionContent,ServicesContent} from '../../../../../GetQuotaContent'
+import FormikInput from '../../../../../components/FormikInput'
+import {SolutionContent,ServicesContent} from '../../../../../Arrays/GetQuotaContent'
    class GetQuota extends Component{
        state={
         SolutionsList:SolutionContent,
@@ -20,7 +21,8 @@ import {SolutionContent,ServicesContent} from '../../../../../GetQuotaContent'
         </Text>
         </View>
         <View style={styles.PickerHolder}>
-        <Picker
+        <View style={styles.PickerView}>
+        <Picker   mode="dropdown"
   selectedValue={this.state.Solutions}
   style={{ height: 100, width: "90%" }}
   onValueChange={(itemValue, itemIndex) => this.setState({Solutions: itemValue})}>
@@ -31,7 +33,10 @@ import {SolutionContent,ServicesContent} from '../../../../../GetQuotaContent'
       )
   })} 
   </Picker>
+  </View>
+        <View style={styles.PickerView}>
         <Picker
+        mode="dropdown"
   selectedValue={this.state.Software}
   style={{ height: 100, width: "90%" }}
   onValueChange={(itemValue, itemIndex) => this.setState({Software: itemValue})}>
@@ -43,75 +48,83 @@ import {SolutionContent,ServicesContent} from '../../../../../GetQuotaContent'
       )
   })}
           </Picker>
+  </View>
   
         </View>
-        </View>
+        {/* <View style={styles.FormikHolder}> */}
         <Formik style={styles.Formik}
-          initialValues= {{ email: '', password: '', confirmPassword: '' }}
-          onSubmit={this._handleSubmit}
+        validateOnChange={false}
+        validationOnBlur={false}
+          initialValues= {{ name: '', company: '', email: '',phoneNum:"",message:"" }}
+          onSubmit={() => {alert('SUCCESS')}}
           validationSchema={Yup.object().shape({
-            email: Yup.string()
-              .email()
-              .required('Email is required'),
-            password: Yup.string()
-              .min(6)
-              .required('Password is required'),
-            confirmPassword: 
-              Yup.string().oneOf([Yup.ref('password', null)], 
-              'Confirm Password must matched Password',
-              ).required('Confirm Password is required')
+            name: Yup.string().required('Required'),
+            company: Yup.string().required('Required'),
+            email: Yup.string().required('Required')
+            .email('Email Required')
+            ,
+            phoneNum: Yup.string().required('Required')
+            .min(11,"Not a phone number!"),
+            message: Yup.string().required('Required'),
+            
           })}
           render={({ 
             values, 
             handleSubmit, 
             setFieldValue, 
             errors, 
+            handleChange,
             touched, 
             setFieldTouched,
             isValid,
             isSubmitting
           }) => (
             <React.Fragment>
-              <TextInput 
-              placeholder="Name"
-              style={{
-                  backgroundColor:"white",
-                  borderBottomColor:"gray",
-                  borderBottomWidth:1,
-                  width:"90%",
-                  alignContent:"center"
-              }}
-                />
-              <TextInput 
-                placeholder="Company"
-                />
-              <TextInput 
-                placeholder="Email"
-                />
-                 <TextInput 
-                placeholder="Phone Number"
-                />
+             <FormikInput placeholder={"Name"}
+             value={values.name}
+             onChangeText={handleChange('name')}
+             /> 
+             <Text>{errors.name}</Text>
+              <FormikInput placeholder={"Company"}
+             value={values.company}
+             onChangeText={handleChange('company')}/>
+              <FormikInput placeholder={"Email"}
+             value={values.email}
+             onChangeText={handleChange('email')}/>
+              <FormikInput placeholder={"Phone Number"}
+             value={values.phoneNum}
+             onChangeText={handleChange('phoneNum')}/>
+              <FormikInput placeholder={"Message"}
+             value={values.message}
+             onChangeText={handleChange('message')}/>
               <Button 
               backgroundColor='blue' 
               style={styles.button} 
               title='Submit' 
               onPress={handleSubmit}
-            //   disabled={!isValid}
+              disabled={!isValid}
               loading={isSubmitting}
               />
             </React.Fragment>
           )}
         />
+        {/* </View> */}
+        
+        </View>
     </View>
     )
     }
     }
     const styles = StyleSheet.create({
-        Formik:{
-
-            alignItems:"center",
-            justifyContent: 'center',
-        },
+        // Formik:{
+        // },
+        // FormikHolder:{
+        //   flex:2,
+        //   width:"100%",
+        //   backgroundColor:"white",
+        //     alignItems:"center",
+        //     justifyContent: 'center',
+        // },
     Container:{ 
         flex:1,
             alignItems:"center",
@@ -120,7 +133,10 @@ import {SolutionContent,ServicesContent} from '../../../../../GetQuotaContent'
     Holder:{
         flex:1,
         backgroundColor:"yellow",
-        width:"100%"
+        width:"100%",
+            alignItems:"center",
+            justifyContent: 'center',
+
     },
     PickerHolder:{
         // flex:1,
@@ -133,6 +149,7 @@ import {SolutionContent,ServicesContent} from '../../../../../GetQuotaContent'
     },
     PickerStyle:{
         width:"100%",
+        
         height:"100%"
     },
     Holder1:{

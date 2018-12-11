@@ -5,11 +5,11 @@ import OptionsHolder from '../components/OptionsHolder'
      render(){
     return(
     <View style={styles.Container}>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('MainDrawer')}>
+        <OptionsHolder  onPress={() => this.props.navigation.navigate('WhatWeDo')}>
         What We Do</OptionsHolder>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('IndustriesStack')}>
+        <OptionsHolder  onPress={() => this.props.navigation.navigate('Industries')}>
         Industries</OptionsHolder>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('MainDrawer')}>
+        <OptionsHolder  onPress={() => this.props.navigation.navigate('Insights')}>
         Insights</OptionsHolder>
         <OptionsHolder  onPress={() => this.props.navigation.navigate('MainDrawer')}>
         Careers</OptionsHolder>

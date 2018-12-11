@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {View,Text,StyleSheet} from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
-import {WhateWeDoContent} from '../WhatWeDoContents'
+import {WhateWeDoContent} from '../Arrays/WhatWeDoContents'
    class BlockOptionsView extends Component{
        state={
            items:WhateWeDoContent

@@ -19,7 +19,7 @@ const IndustriesStack = createStackNavigator({
             size={30} color="black" style={{marginLeft:10}}/>,
         
     }}
-    }
+    },
 },
     
 {   initialRouteName:("Industries"),
