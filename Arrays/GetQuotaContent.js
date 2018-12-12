@@ -2,7 +2,8 @@ export const SolutionContent =[
 
     {
         id:0,
-        name:"What solution do you need?"
+        name:"What solution do you need?",
+        value:""
     },
     {
         id:1,
@@ -39,14 +40,17 @@ export const SolutionContent =[
 ]
 
 export const ServicesContent={
-    
+    "Services": [
+
+        {
+            id:0,
+            name:"Services",
+            value:""
+        },
+    ] ,
     
         "Software Development" :[
-            {
-                id:0,
-                name:"Services",
-                value:"Services"
-            },
+          
             {
                 id:1,
                 name:"Web Application",

@@ -11,7 +11,7 @@ const IndustriesStack = createStackNavigator({
         headerTintColor:"black",
         title: "Industries",
         headerStyle:{
-            backgroundColor:"white",
+            backgroundColor:"#66CD9A",
   
         },
         headerLeft:

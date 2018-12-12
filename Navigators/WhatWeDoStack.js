@@ -2,7 +2,7 @@ import React,{ Component }  from 'react'
 import { createStackNavigator } from 'react-navigation'
 import Icon from 'react-native-vector-icons/Ionicons'
 import SoftDevStack from './SoftDevStack'
-import { SoftDev,GetQuota,Ty } from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoContents/SoftDev'
+import { SoftDev,GetQuote,Ty } from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoContents/SoftDev'
 import WhatWeDo from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDo'
 import { CyberSec,EnterpriseSol,ItStaffing,ManagedServices,TrainingsAndDev } from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoContents/'
 const WhatWeDoStack = createStackNavigator({
@@ -14,7 +14,7 @@ const WhatWeDoStack = createStackNavigator({
         headerTintColor:"black",
         title: "What We Do",
         headerStyle:{
-            backgroundColor:"white",
+            backgroundColor:"#66CD9A",
   
         },
         headerLeft:
@@ -31,7 +31,7 @@ const WhatWeDoStack = createStackNavigator({
           headerTintColor:"black",
           title: "Software Development",
           headerStyle:{
-              backgroundColor:"white",
+              backgroundColor:"#66CD9A",
     
           },
           headerLeft:
@@ -48,7 +48,7 @@ const WhatWeDoStack = createStackNavigator({
           headerTintColor:"black",
           title: "Software Development",
           headerStyle:{
-              backgroundColor:"white",
+              backgroundColor:"#66CD9A",
     
           },
           headerLeft:
@@ -56,20 +56,20 @@ const WhatWeDoStack = createStackNavigator({
               size={30} color="black" style={{marginLeft:10}}/>,
           
       }}
-      }, GetQuota:{
-        screen:GetQuota,
+      }, GetQuote:{
+        screen:GetQuote,
         navigationOptions: ({navigation}) =>  {
           return{ 
           
-          headerTintColor:"black",
-          title: "Software Development",
+          headerTintColor:"white",
+          title: "Get Quote",
           headerStyle:{
-              backgroundColor:"white",
+              backgroundColor:"#2FD095",
     
           },
           headerLeft:
-          <Icon name="md-arrow-back" onPress={() => navigation.goBack()}
-              size={30} color="black" style={{marginLeft:10}}/>,
+          <Icon name="ios-arrow-back" onPress={() => navigation.goBack()}
+              size={30} color="white" style={{marginLeft:10}}/>,
           
       }}
       },
@@ -81,7 +81,7 @@ const WhatWeDoStack = createStackNavigator({
           headerTintColor:"black",
           title: "WebAppDev",
           headerStyle:{
-              backgroundColor:"white",
+              backgroundColor:"#66CD9A",
     
           },
           headerLeft:
@@ -101,7 +101,7 @@ const WhatWeDoStack = createStackNavigator({
           headerTintColor:"black",
           title: "Enterprise Solution",
           headerStyle:{
-              backgroundColor:"white",
+              backgroundColor:"#66CD9A",
     
           },
           headerLeft:
@@ -121,7 +121,7 @@ const WhatWeDoStack = createStackNavigator({
           headerTintColor:"black",
           title: "System Integration",
           headerStyle:{
-              backgroundColor:"white",
+              backgroundColor:"#66CD9A",
     
           },
           headerLeft:
@@ -141,7 +141,7 @@ const WhatWeDoStack = createStackNavigator({
           headerTintColor:"black",
           title: "Mobile Application Development",
           headerStyle:{
-              backgroundColor:"white",
+              backgroundColor:"#66CD9A",
     
           },
           headerLeft:
@@ -160,7 +160,7 @@ const WhatWeDoStack = createStackNavigator({
           headerTintColor:"black",
           title: "Mobile Application Development",
           headerStyle:{
-              backgroundColor:"white",
+              backgroundColor:"#66CD9A",
     
           },
           headerLeft:
@@ -174,7 +174,7 @@ const WhatWeDoStack = createStackNavigator({
       }
 },
     
-{   initialRouteName:("WhatWeDo"),
+{   initialRouteName:("GetQuote"),
     
     headerLayoutPreset:"center",
 }

@@ -7,6 +7,8 @@ const Drawer = (props) => (
   <SafeAreaView style={{ flex: 1, width:'100%' }}>
 
   <View style={styles.drawerView}>
+      
+
       <DrawerItems style={styles.DrawerText} {...props} />
   </View>
 

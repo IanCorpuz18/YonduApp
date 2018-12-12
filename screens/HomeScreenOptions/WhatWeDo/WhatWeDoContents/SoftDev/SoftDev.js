@@ -5,7 +5,7 @@ import {View,Text,StyleSheet, TouchableOpacity,Button} from 'react-native'
      render(){
     return(
     <View style={styles.Container}>
-    {/* <TouchableOpacity onPress={() => this.props.navigation.navigate('GetQuota')}>
+    {/* <TouchableOpacity onPress={() => this.props.navigation.navigate('GetQuote')}>
         <Text>SoftDev</Text>
         </TouchableOpacity> */}
         <View style={styles.MainTextHolder}>
@@ -73,7 +73,7 @@ Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
 
 </View>
 <View style={styles.ButtongHolder}>
-<Button title="Get Quota" onPress={() => this.props.navigation.navigate('GetQuota')} />
+<Button title="Get Quota" onPress={() => this.props.navigation.navigate('GetQuote')} />
 </View>
     </View>
     )

@@ -3,7 +3,8 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import Ty from './screens/HomeScreenOptions/WhatWeDo/WhatWeDoContents/SoftDev/Ty'
 import GeneralSwitchNav from './Navigators/GeneralSwitchNav'
-import GetQuota from './screens/HomeScreenOptions/WhatWeDo/WhatWeDoContents/SoftDev/GetQuota'
+import WhatWeDoStack from './Navigators/WhatWeDoStack'
+import GetQuote from './screens/HomeScreenOptions/WhatWeDo/WhatWeDoContents/SoftDev/GetQuote'
 import IndustriesStack from './Navigators/IndustriesStack'
 import SoftDev from './screens/HomeScreenOptions/WhatWeDo/WhatWeDoContents/SoftDev/SoftDev'
 import InsightsStack from './Navigators/InsightsStack'
@@ -11,7 +12,7 @@ import Article from './screens/HomeScreenOptions/Insights/InsightsContent/Articl
 export default class App extends Component {
   render() {
     return (
-      <GetQuota/>
+      <GeneralSwitchNav/>
     );
   }
 }

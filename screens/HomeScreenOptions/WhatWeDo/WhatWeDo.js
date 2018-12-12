@@ -14,7 +14,7 @@ import CustomButton from '../../../components/CustomButton';
       
         </ScrollView>
         <View style={styles.ButtonHolder}>
-        <CustomButton onPress={() => this.props.navigation.navigate('GetQuota')} elevation={{elevation:10}} bgColor={{backgroundColor:"#66CC99"}}>Get Quote</CustomButton>
+        <CustomButton onPress={() => this.props.navigation.navigate('GetQuote')} elevation={{elevation:10}} bgColor={{backgroundColor:"#66CC99"}}>Get Quote</CustomButton>
         </View>
   </View>
     )

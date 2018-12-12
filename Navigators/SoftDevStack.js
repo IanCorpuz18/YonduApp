@@ -1,7 +1,7 @@
 import React,{ Component }  from 'react'
 import { createStackNavigator } from 'react-navigation'
 import Icon from 'react-native-vector-icons/Ionicons'
-import { SoftDev,GetQuota,Ty } from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoContents/SoftDev'
+import { SoftDev,GetQuote,Ty } from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoContents/SoftDev'
 const WhatWeDoStack = createStackNavigator({
     SoftDev:{
       screen:SoftDev,
@@ -11,7 +11,7 @@ const WhatWeDoStack = createStackNavigator({
         headerTintColor:"black",
         title: "Software Development",
         headerStyle:{
-            backgroundColor:"white",
+            backgroundColor:"#66CD9A",
   
         },
         headerLeft:
@@ -20,15 +20,15 @@ const WhatWeDoStack = createStackNavigator({
         
     }}
     },
-    GetQuota:{
-        screen:GetQuota,
+    GetQuote:{
+        screen:GetQuote,
         navigationOptions:  ({navigation}) =>  {
             return{ 
             
           headerTintColor:"black",
           title: "Software Development",
           headerStyle:{
-              backgroundColor:"white",
+              backgroundColor:"#66CD9A",
     
           },
           headerLeft:
@@ -48,7 +48,7 @@ const WhatWeDoStack = createStackNavigator({
           headerTintColor:"black",
           title: "Software Development",
           headerStyle:{
-              backgroundColor:"white",
+              backgroundColor:"#66CD9A",
     
           },
           headerLeft:

@@ -1,22 +1,21 @@
 import React, { Component } from 'react'
-import {View,Text,StyleSheet, TouchableOpacity} from 'react-native'
+import {View,StyleSheet, TouchableOpacity} from 'react-native'
 import OptionsHolder from '../components/OptionsHolder'
+import {HomeChoices} from '../Arrays/HomePageContent'
    class HomePage extends Component{
+       state={
+           ChoiceList:HomeChoices,
+        Choice:""
+       }
      render(){
     return(
     <View style={styles.Container}>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('WhatWeDo')}>
-        What We Do</OptionsHolder>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('Industries')}>
-        Industries</OptionsHolder>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('Insights')}>
-        Insights</OptionsHolder>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('MainDrawer')}>
-        Careers</OptionsHolder>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('MainDrawer')}>
-        About Yondu</OptionsHolder>
-        <OptionsHolder  onPress={() => this.props.navigation.navigate('MainDrawer')}>
-        Contact Us</OptionsHolder>
+    {this.state.ChoiceList.map((item, key) => {
+        return (
+        <OptionsHolder key={key}  onPress={() => this.props.navigation.navigate(item.value)}>
+        {item.name}</OptionsHolder>
+        )
+    })}
     </View>
     )
     }

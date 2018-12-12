@@ -14,7 +14,7 @@ const InsightsStack = createStackNavigator({
         headerTintColor:"black",
         title: "Insights",
         headerStyle:{
-            backgroundColor:"white",
+            backgroundColor:"#66CD9A",
         },
         headerLeft:
             <Icon name="ios-menu" onPress={() => navigation.openDrawer()}
