@@ -29,11 +29,9 @@ import ChoiceTiles from '../../../components/ChoiceTiles'
         width:"100%",
         flexWrap:"wrap",
         flexDirection:"row",
-            // backgroundColor:"blue"
     },
     holder:{
         flex:1,
-        // backgroundColor:"green",
         
     }
     })

@@ -22,38 +22,5 @@ import InsightsItem from '../../../components/InsightsItem'
         flex:1,
         backgroundColor:"#FFFFFF" 
     },
-    BlockHolder:{
-        flex:1,
-        flexDirection:"row",
-        justifyContent:"center",
-        alignItems:"center"
-    },
-    ContextHolder:{
-        flex:13,
-        padding:10,
-    },
-    TitleText:{
-        fontSize:20,
-        color:"#000000",
-        fontWeight:"bold"
-    },
-    TagText:{
-        fontSize:15,
-        color:"blue",
-        fontStyle:"italic",
-        padding:2
-    },
-    SubTitleText:{
-        fontSize:15,
-        color:"gray",
-        padding:2
-    },
-    ImageHolder:{
-        flex:3,
-        height:75,
-        width:75,
-        backgroundColor:"#D8D8D8",
-        margin:10
-    }
     })
 export default Insights;

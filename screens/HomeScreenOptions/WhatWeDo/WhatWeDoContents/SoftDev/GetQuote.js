@@ -99,10 +99,8 @@ class GetQuote extends Component {
                                             value={values.message}
                                             onChangeText={handleChange('message')}
                                             Text={errors.message}
-
                                         />
                                     </View>
-
                                     <CustomButton onPress={() => handleSubmit()} >Submit</CustomButton>
                                 </View>
                             )}
@@ -113,33 +111,14 @@ class GetQuote extends Component {
 }
 const styles = StyleSheet.create({
 
-    Formik: {
-        flex: 1,
-    },
-    PickerView: {
-        width: "100%",
-        borderBottomColor: '#1E1E1E',
-        borderBottomWidth: 1,
-    },
     Container: {
         flex: 1,
         paddingVertical: 30,
         backgroundColor: "#FFFFFF",
     },
-    Holder: {
-        flex: 1,
-        backgroundColor: "#FFFFFF",
-        width: "100%",
-        alignItems: "center",
-        justifyContent: 'center',
-
-    },
     PickerHolder: {
         width: "100%",
         backgroundColor: "#FFFFFF"
-    },
-    Holder1: {
-        flex: 1
     },
 })
 export default GetQuote;

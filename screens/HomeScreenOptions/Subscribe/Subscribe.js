@@ -99,7 +99,6 @@ const styles = StyleSheet.create({
         width:"100%",
         justifyContent:"space-between",
         alignItems:"center",
-        // backgroundColor:"green",
     },
     Input:{
         width:"100%",

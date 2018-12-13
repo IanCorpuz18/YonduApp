@@ -24,14 +24,7 @@ const WhatWeDoStack = createStackNavigator({
         screen:Ty,
         navigationOptions: ({navigation}) =>  {
           return{ 
-          headerTintColor:"#FFFFFF",
-          title: "Software Development",
-          headerStyle:{
-              backgroundColor:"#66CD9A",
-          },
-          headerLeft:
-          <Icon name="md-arrow-back" onPress={() => navigation.goBack()}
-              size={30} color="#FFFFFF" style={{marginLeft:10}}/>,
+          header:null
       }}
       }, GetQuote:{
         screen:GetQuote,

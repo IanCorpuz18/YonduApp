@@ -115,9 +115,6 @@ const styles = StyleSheet.create({
    flexDirection:'row',
    marginTop: 50,
  },
- textContent:{
-
- }
 })
 
 export default ContactUs;
