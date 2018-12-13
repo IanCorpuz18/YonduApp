@@ -98,7 +98,7 @@ class ContactUs extends Component {
 const styles = StyleSheet.create({
     Container:{
         flex:1,
-        backgroundColor:"white"
+        backgroundColor:"#FFFFFF"
     },
  topView:{
    flex: 1,

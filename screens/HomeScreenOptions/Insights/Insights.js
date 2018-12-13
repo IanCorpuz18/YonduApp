@@ -11,7 +11,7 @@ import InsightsItem from '../../../components/InsightsItem'
     return(
     <View style={styles.Container}>
 
-           <InsightsItem onPress={ () => this.props.navigation.navigate('Article') }/>
+           <InsightsItem onPress={ (item) => this.props.navigation.navigate.bind(this,'Article',{data:item}) }/>
             
     </View>
     )
@@ -20,7 +20,7 @@ import InsightsItem from '../../../components/InsightsItem'
     const styles = StyleSheet.create({
     Container:{
         flex:1,
-        backgroundColor:"white" 
+        backgroundColor:"#FFFFFF" 
     },
     BlockHolder:{
         flex:1,
@@ -34,7 +34,7 @@ import InsightsItem from '../../../components/InsightsItem'
     },
     TitleText:{
         fontSize:20,
-        color:"black",
+        color:"#000000",
         fontWeight:"bold"
     },
     TagText:{

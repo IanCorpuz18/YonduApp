@@ -52,20 +52,15 @@ import LocalImage from '../../../components/LocalImage'
     }
     const styles = StyleSheet.create({
     Container:{ 
-        // flex:1,
-        backgroundColor:"white"
+        backgroundColor:"#FFFFFF"
     },
     Header:{
-        // flex:4,
         height:"20%",
         width:"100%",
         justifyContent:"center",
         alignItems:"center",
-        // margin:20,
-        // backgroundColor:"green"
     },
     Content:{
-        // flex:4,
         justifyContent:"space-between",
         alignItems:"center",
         marginHorizontal:20,
@@ -82,12 +77,11 @@ import LocalImage from '../../../components/LocalImage'
         color:"#95999E",
         paddingBottom:5,
         width:"100%",
-        // textAlign:"left",
     },
     LogoHolder:{
-flex:1,
-height:200,
-flexDirection:"row",
+    flex:1,
+    height:200,
+    flexDirection:"row",
     }, 
     logo:{
         flex:1,

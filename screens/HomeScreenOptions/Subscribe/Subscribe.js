@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
         flex: 1,
         width: "100%",
         justifyContent:"center",
-        backgroundColor: "white",
+        backgroundColor: "#FFFFFF",
     },
     FormikContent:{
         height:Dimensions.get('window').width * 0.75,

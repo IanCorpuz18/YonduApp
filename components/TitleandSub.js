@@ -23,7 +23,6 @@ import {View,Text,StyleSheet} from 'react-native'
         MainTextHolder:{
             justifyContent:"center",
             alignItems:"center",
-            // backgroundColor:"green",
             flex:1,
         },
         TitleTextHolder:{
@@ -33,18 +32,16 @@ import {View,Text,StyleSheet} from 'react-native'
         },
         Titletext:{
             fontSize:20,
-            color:"black",
+            color:"#000000",
             fontWeight:"bold",
         },
         SubtitleHolder:{
             justifyContent:"flex-start",
             alignItems:"center",
-            
             flex:4,
-            // width:"55%"
         },
         Subtitle:{
-            fontSize:20,
+            fontSize:17,
             color:"#919292",
             textAlign:"center"
         }

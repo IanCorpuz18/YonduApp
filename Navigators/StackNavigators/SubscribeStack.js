@@ -11,24 +11,19 @@ const SubscribeStack = createStackNavigator({
       navigationOptions: ({navigation}) =>  {
         return{ 
         
-            headerTintColor:"white",
+            headerTintColor:"#FFFFFF",
             title: "Subscribe with Email",
             headerStyle:{
                 backgroundColor:"#66CD9A",
-      
             },
             headerLeft:
                 <Icon name="ios-arrow-back" onPress={() => navigation.navigate('HomePage')}
-                size={30} color="white" style={{marginLeft:10}}/>,
-        
+                size={30} color="#FFFFFF" style={{marginLeft:10}}/>,
     }}
     },
 },
-    
 {   initialRouteName:("Subscribe"),
-    
     headerLayoutPreset:"center",
-    // headerMode:"none"
 }
     
 )

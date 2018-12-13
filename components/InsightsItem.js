@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {View,Text,StyleSheet, TouchableOpacity} from 'react-native'
+import {View,Text,StyleSheet, TouchableOpacity, Image} from 'react-native'
 import {InsightsContent} from '../Arrays/InsightsContent'
    class InsightsItem extends Component{
        state={
@@ -10,14 +10,13 @@ import {InsightsContent} from '../Arrays/InsightsContent'
         return this.state.InsightsList.map((item,key) => {
             return(
         <View style={styles.BlockHolder} key={key}>
-            
         <View style={styles.ContextHolder}>
-        <TouchableOpacity onPress={this.props.onPress}>
+        <TouchableOpacity onPress={this.props.onPress(item)}>
         <Text style={styles.TitleText}>
         {item.title}
         </Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={this.props.onPress}>
+        <TouchableOpacity onPress={this.props.onPress(item)}>
         <Text style={styles.SubTitleText}>
         {item.subtitle}
         </Text>
@@ -30,18 +29,18 @@ import {InsightsContent} from '../Arrays/InsightsContent'
         </View>   
 
         <View style={styles.ImageHolder}>
-        
+        <Image
+        source={item.img}
+        style={{width:"100%",height:"100%"}}
+        />
         </View>    
         </View>
-        
    )})
-    
     }
     }
     
     const styles = StyleSheet.create({
         BlockHolder:{
-            // flex:1,
             flexDirection:"row",
             borderBottomColor:"#F0F1F5",
             borderBottomWidth:1
@@ -52,7 +51,7 @@ import {InsightsContent} from '../Arrays/InsightsContent'
         },
         TitleText:{
             fontSize:20,
-            color:"black",
+            color:"#1E1E1E",
             fontWeight:"bold"
         },
         TagText:{

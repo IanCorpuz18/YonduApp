@@ -1,12 +1,10 @@
-
-import { createStackNavigator, createMaterialTopTabNavigator, createSwitchNavigator } from 'react-navigation';  
-import React, {Component} from 'react';
-import FrontPage from '../screens/FrontPage'
+import { createStackNavigator, createMaterialTopTabNavigator, createSwitchNavigator } from 'react-navigation';
 import HomePage from '../screens/HomePage'
 import MainDrawer from './MainDrawer'
-import {SubscribeStack,IndustriesStack} from './'
+import YonduSplashScreen from '../screens/SplashScreen/SplashScreen/'
+import {SubscribeStack} from './'
 const GeneralSwitchNav = createSwitchNavigator({
-    FrontPage: FrontPage,
+    YonduSplashScreen: YonduSplashScreen,
     HomePage: HomePage,
     MainDrawer:MainDrawer,
     SubscribeStack:SubscribeStack

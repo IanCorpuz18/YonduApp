@@ -4,7 +4,7 @@ const CustomButton = props => (
     <TouchableOpacity onPress={props.onPress} style={{
         width:"100%"}}>
         <View style={[styles.button]}> 
-            <Text style={[{color:"white"},props.textColor, props.textWeight]}>{props.children}</Text>
+            <Text style={[{color:"#FFFFFF"},props.textColor, props.textWeight]}>{props.children}</Text>
         </View>
     </TouchableOpacity>
 );

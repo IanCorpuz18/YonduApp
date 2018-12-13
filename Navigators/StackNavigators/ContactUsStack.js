@@ -7,19 +7,13 @@ const ContactUsStack = createStackNavigator({
       screen:ContactUs,
       navigationOptions: ({navigation}) =>  {
         return{ 
-        
-       
             header:null
-        
     }}
     },
 },
-    
 {   initialRouteName:("ContactUs"),
     
     headerLayoutPreset:"center",
-    // headerMode:"none"
 }
-    
 )
 export default ContactUsStack;

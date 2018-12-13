@@ -25,7 +25,7 @@ const OptionsHolder = props => (
         },
         TextOptionHolder:{
             fontSize:20,
-            color:"white",
+            color:"#FFFFFF",
             fontWeight: 'bold',
         }
     })

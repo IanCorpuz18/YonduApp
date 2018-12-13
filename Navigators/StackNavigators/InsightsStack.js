@@ -1,5 +1,4 @@
 import React,{ Component }  from 'react'
-
 import {View,Text,StyleSheet} from 'react-native'
 import { createStackNavigator } from 'react-navigation'
 import Article from '../../screens/HomeScreenOptions/Insights/InsightsContent/Article'
@@ -10,16 +9,14 @@ const InsightsStack = createStackNavigator({
       screen:Insights,
       navigationOptions: ({navigation}) =>  {
         return{ 
-        
-        headerTintColor:"white",
+        headerTintColor:"#FFFFFF",
         title: "Insights",
         headerStyle:{
             backgroundColor:"#66CD9A",
         },
         headerLeft:
             <Icon name="ios-arrow-back" onPress={() => navigation.navigate('HomePage')}
-            size={30} color="white" style={{marginLeft:10}}/>,
-        
+            size={30} color="#FFFFFF" style={{marginLeft:10}}/>,
     }}
     },Article:{
         screen:Article,
@@ -31,11 +28,8 @@ const InsightsStack = createStackNavigator({
       }}
       }
 },
-    
 {   initialRouteName:("Insights"),
-    
     headerLayoutPreset:"center",
-    // headerMode:"none"
 }
     
 )

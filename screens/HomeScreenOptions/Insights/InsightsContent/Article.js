@@ -1,31 +1,41 @@
 import React, { Component } from 'react'
-import {View,Text,StyleSheet, Image, ImageBackground, TouchableOpacity} from 'react-native'
-import bg from '../../../../assets/Insight.jpg'
+import {View,Text,StyleSheet, Image, ImageBackground, TouchableOpacity,Share} from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
+// import Share from 'react-native-share'
    class Article extends Component{
-    
-     render(){
-       
-    return(
+    shareHandler = () => {
+       Share.share({
+        title:"Share",
+        message:"Hello",
+        URL:"https://facebook.github.io/react-native/",
+        subject:"Sharing"
+      })
+    }
+     render(){  
+      
+       const { navigation } = this.props;
+      const itemId = navigation.getParam("data", null);
+          return(
     <View style={styles.Container}>
-    
     <View style={styles.Main}>
-    <ImageBackground source={bg} style={styles.Imgbg}>
+    <ImageBackground source={itemId.img} style={styles.Imgbg}>
     <View style={styles.Header}>
     <View style={styles.Icon}>
     <TouchableOpacity onPress={() => this.props.navigation.navigate('Insights')}>
-    <Icon name="ios-arrow-back" size={35} color="white"/>
+    <Icon name="ios-arrow-back" size={35} color="#FFFFFF"/>
     </TouchableOpacity>
     </View>
     <View style={styles.Icon2}>
     <View style={styles.share}>
-    <Icon name="ios-share" size={30} color="black"/>
+    <TouchableOpacity onPress={()=> this.shareHandler()}>
+    <Icon name="ios-share" size={30} color="#000000"/>
+    </TouchableOpacity>
     </View>
     </View>
     </View>
       <View style={styles.CaptionHolder}>
       <Text style={styles.Caption}>
-      LoopBack is a highly-extensible, open-source Node.js framework
+      {itemId.caption}
       </Text>
       </View>
     </ImageBackground>
@@ -35,26 +45,27 @@ import Icon from 'react-native-vector-icons/Ionicons'
     <View style={styles.TagDateholder}>
     <View style={styles.Tag}>
     <Text style={styles.Text}>
-    SOLUTIONS
+    {itemId.tag}
     </Text>
     </View>
     <View style={styles.Date}>
     <Text style={styles.Text}>
-    Nov 7, 2018
+    {itemId.date}
     </Text>
     </View>
     </View>
       
       <View style={styles.ContextHolder}>
       <Text style={styles.Context}>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            {itemId.context}
       </Text>
 
       </View>
 
     </View>
     </View>
-    )
+       
+          )   
     }
     }
     const styles = StyleSheet.create({
@@ -85,7 +96,7 @@ import Icon from 'react-native-vector-icons/Ionicons'
     },
     share:{
       width:"15%",
-      backgroundColor:"white",
+      backgroundColor:"#FFFFFF",
       justifyContent:"center",
       alignItems:"center",
       padding:4
@@ -98,17 +109,16 @@ import Icon from 'react-native-vector-icons/Ionicons'
     Caption:{
       fontSize:20,
       fontWeight:"bold",
-      color:"white"
+      color:"#FFFFFF"
     },
     Content:{
       flex:5,
-      backgroundColor:"white"
+      backgroundColor:"#FFFFFF"
     },
     TagDateholder:{
       flex:2,
       flexDirection:"row",
       justifyContent:"center",
-      // backgroundColor:"white"
     },
     Tag:{
       flex:1,
@@ -130,7 +140,6 @@ import Icon from 'react-native-vector-icons/Ionicons'
     ContextHolder:{
       flex:20,
       paddingHorizontal:10,
-      // backgroundColor:"white"
     },
     Context:{
       color:"#4A4A4A",

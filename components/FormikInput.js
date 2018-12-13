@@ -16,7 +16,7 @@ const FormikInput = props => (
 )
 const styles = StyleSheet.create({
     TextInput: {
-        backgroundColor: "white",
+        backgroundColor: "#FFFFFF",
         width: "90%",
         height:40
     },

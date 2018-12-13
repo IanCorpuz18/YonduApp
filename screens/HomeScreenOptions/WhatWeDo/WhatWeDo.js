@@ -22,7 +22,7 @@ import CustomButton from '../../../components/CustomButton';
     } const styles = StyleSheet.create({
         Container:{
             flex:1,
-            backgroundColor: "white",
+            backgroundColor: "#FFFFFF",
         },
         BlockHolder:{
             flex:1

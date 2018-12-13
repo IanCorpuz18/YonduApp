@@ -21,7 +21,7 @@ import ChoiceTiles from '../../../components/ChoiceTiles'
     const styles = StyleSheet.create({
     Container:{ 
         flex:1,
-        backgroundColor:"white",
+        backgroundColor:"#FFFFFF",
     },
     BlockIcons:{
         flex:4,

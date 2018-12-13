@@ -8,25 +8,19 @@ const IndustriesStack = createStackNavigator({
       navigationOptions: ({navigation}) =>  {
         return{ 
         
-        headerTintColor:"white",
+        headerTintColor:"#FFFFFF",
         title: "Industries",
         headerStyle:{
             backgroundColor:"#66CD9A",
-  
         },
         headerLeft:
             <Icon name="ios-arrow-back" onPress={() => navigation.navigate('HomePage')}
-            size={30} color="white" style={{marginLeft:10}}/>,
-        
+            size={30} color="#FFFFFF" style={{marginLeft:10}}/>,
     }}
     },
 },
-    
 {   initialRouteName:("Industries"),
-    
     headerLayoutPreset:"center",
-    // headerMode:"none"
 }
-    
 )
 export default IndustriesStack;

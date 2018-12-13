@@ -52,7 +52,7 @@ import {WhateWeDoContent} from '../Arrays/WhatWeDoContents'
             // marginLeft:10 ,
             // marginRight: 10,
             elevation:10,
-            backgroundColor: "white",
+            backgroundColor: "#FFFFFF",
             width:"90%",
             borderLeftColor: "#A5FCCB",
             borderLeftWidth: 4,
