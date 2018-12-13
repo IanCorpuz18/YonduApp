@@ -5,6 +5,7 @@ import * as Yup from 'yup'
 import MessageInput from '../../../../../components/MessageInput'
 import CustomButton from '../../../../../components/CustomButton'
 import FormikInput from '../../../../../components/FormikInput'
+import Axios from 'axios'
 import { SolutionContent, ServicesContent } from 'YonduApp/Arrays/GetQuotaContent'
 class GetQuote extends Component {
     state = {
@@ -17,13 +18,27 @@ class GetQuote extends Component {
 
                
                 {
-
-
                     <Formik
                         validateOnChange={false}
                         validationOnBlur={false}
                         initialValues={{ name: '', company: '', email: '', phoneNum: "", message: "", solution:"",services:"" }}
-                        onSubmit={() => { alert('SUCCESS') }}
+                        onSubmit={(values, val) =>{
+                            Axios( 
+                                {
+                                  method:'post',
+                                  url:'http://192.168.190.41:3000/qoute_list',
+                                  data:values
+                                })
+                                .then(res => console.log(res))
+                                .then( val=>{
+                                    console.log(val)
+                                    this.props.navigation.navigate('Ty')
+                                })
+                                .catch(function (error) {
+                                  console.log(error);
+                                });
+                        }}
+
                         validationSchema={Yup.object().shape({
                             solution:Yup.string().required('Required'),
                             services:Yup.string().required('Required'),
@@ -119,7 +134,7 @@ class GetQuote extends Component {
                                     
                                     />
                                  </View>
-                                 
+                                        
                                     <CustomButton onPress={() =>handleSubmit() } >Submit</CustomButton>
                                  </View>
                             )}

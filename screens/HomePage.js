@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import {View,StyleSheet, TouchableOpacity} from 'react-native'
+import {View,StyleSheet, TouchableOpacity, ImageBackground} from 'react-native'
 import OptionsHolder from '../components/OptionsHolder'
 import {HomeChoices} from '../Arrays/HomePageContent'
+import img from '../assets/what_we_do.png'
    class HomePage extends Component{
        state={
            ChoiceList:HomeChoices,
@@ -12,7 +13,8 @@ import {HomeChoices} from '../Arrays/HomePageContent'
     <View style={styles.Container}>
     {this.state.ChoiceList.map((item, key) => {
         return (
-        <OptionsHolder key={key}  onPress={() => this.props.navigation.navigate(item.value)}>
+        <OptionsHolder img={item.img} key={key}  onPress={() => this.props.navigation.navigate(item.value)}>
+        
         {item.name}</OptionsHolder>
         )
     })}

@@ -5,7 +5,7 @@ import {View,Text,StyleSheet} from 'react-native'
      render(){
     return(
         <View style={[styles.MainTextHolder, this.props.marginTop]}>
-        <View style={styles.TitleTextHolder}>
+        <View style={[styles.TitleTextHolder, this.props.newFlex]}>
         <Text style={styles.Titletext}>
         {this.props.Title}
         </Text>
@@ -23,6 +23,7 @@ import {View,Text,StyleSheet} from 'react-native'
         MainTextHolder:{
             justifyContent:"center",
             alignItems:"center",
+            // backgroundColor:"green",
             flex:1,
         },
         TitleTextHolder:{

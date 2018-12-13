@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {View,Text,StyleSheet, Image, ImageBackground} from 'react-native'
+import {View,Text,StyleSheet, Image, ImageBackground, TouchableOpacity} from 'react-native'
 import bg from '../../../../assets/Insight.jpg'
 import Icon from 'react-native-vector-icons/Ionicons'
    class Article extends Component{
@@ -13,7 +13,9 @@ import Icon from 'react-native-vector-icons/Ionicons'
     <ImageBackground source={bg} style={styles.Imgbg}>
     <View style={styles.Header}>
     <View style={styles.Icon}>
+    <TouchableOpacity onPress={() => this.props.navigation.navigate('Insights')}>
     <Icon name="ios-arrow-back" size={35} color="white"/>
+    </TouchableOpacity>
     </View>
     <View style={styles.Icon2}>
     <View style={styles.share}>

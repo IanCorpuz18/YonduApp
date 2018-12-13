@@ -17,47 +17,21 @@ import TitleAndSub from '../../../../../components/TitleandSub'
         />
         </View>
         <TitleAndSub subWidth={{width:"55%"}}/>
-        <CustomButton>Back To Home</CustomButton>
+        <CustomButton onPress={() => this.props.navigation.navigate('HomePage')}>Back To Home</CustomButton>
     </View>
     )
     }
     }
     const styles = StyleSheet.create({
     Container:{ 
-        flex:1
+        flex:1,
+        backgroundColor:"white"
     },
     ImageHolder:{
-        flex:2,
+        flex:1,
         justifyContent:"flex-end",
         alignItems:"center"
 
     },
-    MainTextHolder:{
-        justifyContent:"center",
-        alignItems:"center",
-        flex:1
-    },
-    TitleTextHolder:{
-        flex:1,
-        justifyContent:"center",
-        alignItems:"center",
-    },
-    Titletext:{
-        fontSize:20,
-        color:"black",
-        fontWeight:"bold",
-    },
-    SubtitleHolder:{
-        justifyContent:"flex-start",
-        alignItems:"center",
-        
-        flex:4,
-        width:"55%"
-    },
-    Subtitle:{
-        fontSize:20,
-        color:"#919292",
-        textAlign:"center"
-    }
     })
 export default Ty;

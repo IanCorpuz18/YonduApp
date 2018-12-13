@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { View, Text, StyleSheet, TextInput } from 'react-native'
 
 const FormikInput = props => (
-    <View style={styles.MainHolder}>
+    <View style={[styles.MainHolder,props.style]}>
         <TextInput style={[styles.TextInput, props.styleInput]}
             {...props}
         />

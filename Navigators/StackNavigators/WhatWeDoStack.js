@@ -2,16 +2,16 @@ import React,{ Component }  from 'react'
 import { createStackNavigator } from 'react-navigation'
 import Icon from 'react-native-vector-icons/Ionicons'
 import SoftDevStack from './SoftDevStack'
-import { SoftDev,GetQuote,Ty } from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoContents/SoftDev'
-import WhatWeDo from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDo'
-import { CyberSec,EnterpriseSol,ItStaffing,ManagedServices,TrainingsAndDev } from '../screens/HomeScreenOptions/WhatWeDo/WhatWeDoContents/'
+import { SoftDev,GetQuote,Ty } from '../../screens/HomeScreenOptions/WhatWeDo/WhatWeDoContents/SoftDev'
+import WhatWeDo from '../../screens/HomeScreenOptions/WhatWeDo/WhatWeDo'
+import { CyberSec,EnterpriseSol,ItStaffing,ManagedServices,TrainingsAndDev } from '../../screens/HomeScreenOptions/WhatWeDo/WhatWeDoContents'
 const WhatWeDoStack = createStackNavigator({
     WhatWeDo:{
       screen:WhatWeDo,
       navigationOptions: ({navigation}) =>  {
         return{ 
         
-        headerTintColor:"black",
+        headerTintColor:"white",
         title: "What We Do",
         headerStyle:{
             backgroundColor:"#66CD9A",
@@ -19,7 +19,7 @@ const WhatWeDoStack = createStackNavigator({
         },
         headerLeft:
             <Icon name="ios-menu" onPress={() => navigation.openDrawer()}
-            size={30} color="black" style={{marginLeft:10}}/>,
+            size={30} color="white" style={{marginLeft:10}}/>,
         
     }}
     },
@@ -28,7 +28,7 @@ const WhatWeDoStack = createStackNavigator({
         navigationOptions: ({navigation}) =>  {
           return{ 
           
-          headerTintColor:"black",
+          headerTintColor:"white",
           title: "Software Development",
           headerStyle:{
               backgroundColor:"#66CD9A",
@@ -36,7 +36,7 @@ const WhatWeDoStack = createStackNavigator({
           },
           headerLeft:
               <Icon name="md-arrow-back" onPress={() => navigation.goBack()}
-              size={30} color="black" style={{marginLeft:10}}/>,
+              size={30} color="white" style={{marginLeft:10}}/>,
           
       }}
       },
@@ -45,7 +45,7 @@ const WhatWeDoStack = createStackNavigator({
         navigationOptions: ({navigation}) =>  {
           return{ 
           
-          headerTintColor:"black",
+          headerTintColor:"white",
           title: "Software Development",
           headerStyle:{
               backgroundColor:"#66CD9A",
@@ -53,7 +53,7 @@ const WhatWeDoStack = createStackNavigator({
           },
           headerLeft:
           <Icon name="md-arrow-back" onPress={() => navigation.goBack()}
-              size={30} color="black" style={{marginLeft:10}}/>,
+              size={30} color="white" style={{marginLeft:10}}/>,
           
       }}
       }, GetQuote:{
@@ -62,13 +62,13 @@ const WhatWeDoStack = createStackNavigator({
           return{ 
           
           headerTintColor:"white",
-          title: "Get Quote",
+          title: "Get a Quote",
           headerStyle:{
               backgroundColor:"#2FD095",
     
           },
           headerLeft:
-          <Icon name="ios-arrow-back" onPress={() => navigation.goBack()}
+          <Icon name="ios-arrow-back" onPress={() => navigation.navigate('WhatWeDo')}
               size={30} color="white" style={{marginLeft:10}}/>,
           
       }}
@@ -78,7 +78,7 @@ const WhatWeDoStack = createStackNavigator({
         navigationOptions:  ({navigation}) =>  {
             return{ 
             
-          headerTintColor:"black",
+          headerTintColor:"white",
           title: "WebAppDev",
           headerStyle:{
               backgroundColor:"#66CD9A",
@@ -89,7 +89,7 @@ const WhatWeDoStack = createStackNavigator({
           name="md-arrow-back" size={30} color="black" style={{marginLeft:10}}/>,
           headerRight:
               <Icon name="ios-menu" onPress={() => navigation.openDrawer()}
-              size={30} color="black" style={{marginRight:10}}/>,
+              size={30} color="white" style={{marginRight:10}}/>,
           
       }}
       },
@@ -98,7 +98,7 @@ const WhatWeDoStack = createStackNavigator({
         navigationOptions: ({navigation}) =>  {
             return{ 
             
-          headerTintColor:"black",
+          headerTintColor:"white",
           title: "Enterprise Solution",
           headerStyle:{
               backgroundColor:"#66CD9A",
@@ -109,7 +109,7 @@ const WhatWeDoStack = createStackNavigator({
           name="md-arrow-back" size={30} color="black" style={{marginLeft:10}}/>,
           headerRight:
               <Icon name="ios-menu" onPress={() => navigation.openDrawer()}
-              size={30} color="black" style={{marginRight:10}}/>,
+              size={30} color="white" style={{marginRight:10}}/>,
           
       }}
       },
@@ -118,7 +118,7 @@ const WhatWeDoStack = createStackNavigator({
         navigationOptions: ({navigation}) =>  {
             return{ 
             
-          headerTintColor:"black",
+          headerTintColor:"white",
           title: "System Integration",
           headerStyle:{
               backgroundColor:"#66CD9A",
@@ -129,7 +129,7 @@ const WhatWeDoStack = createStackNavigator({
           name="md-arrow-back" size={30} color="black" style={{marginLeft:10}}/>,
           headerRight:
               <Icon name="ios-menu" onPress={() => navigation.openDrawer()}
-              size={30} color="black" style={{marginRight:10}}/>,
+              size={30} color="white" style={{marginRight:10}}/>,
           
       }}
       },
@@ -138,7 +138,7 @@ const WhatWeDoStack = createStackNavigator({
         navigationOptions:  ({navigation}) =>  {
             return{ 
             
-          headerTintColor:"black",
+          headerTintColor:"white",
           title: "Mobile Application Development",
           headerStyle:{
               backgroundColor:"#66CD9A",
@@ -149,7 +149,7 @@ const WhatWeDoStack = createStackNavigator({
           name="md-arrow-back" size={30} color="black" style={{marginLeft:10}}/>,
           headerRight:
               <Icon name="ios-menu" onPress={() => navigation.openDrawer()}
-              size={30} color="black" style={{marginRight:10}}/>,
+              size={30} color="white" style={{marginRight:10}}/>,
           
       }}
       },    EnterpriseSol:{
@@ -157,7 +157,7 @@ const WhatWeDoStack = createStackNavigator({
         navigationOptions:  ({navigation}) =>  {
             return{ 
             
-          headerTintColor:"black",
+          headerTintColor:"white",
           title: "Mobile Application Development",
           headerStyle:{
               backgroundColor:"#66CD9A",
@@ -168,13 +168,13 @@ const WhatWeDoStack = createStackNavigator({
           name="md-arrow-back" size={30} color="black" style={{marginLeft:10}}/>,
           headerRight:
               <Icon name="ios-menu" onPress={() => navigation.openDrawer()}
-              size={30} color="black" style={{marginRight:10}}/>,
+              size={30} color="white" style={{marginRight:10}}/>,
           
       }}
       }
 },
     
-{   initialRouteName:("GetQuote"),
+{   initialRouteName:("WhatWeDo"),
     
     headerLayoutPreset:"center",
 }
